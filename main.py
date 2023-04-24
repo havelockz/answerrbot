@@ -1,3 +1,5 @@
+import os
+
 import telegram
 from telegram.ext import Updater, MessageHandler, CommandHandler, Filters
 
@@ -37,7 +39,9 @@ updater = Updater(bot_token, use_context=True)
 # Додаємо обробники повідомлень та команд
 updater.dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, message_handler))
 updater.dispatcher.add_handler(CommandHandler('s', reply_handler))
-
-# Запускаємо бота
-updater.start_polling()
+updater.start_webhook(listen='0.0.0.0', port=int(os.environ.get('PORT', 5000)), url_path='6280626788:AAFLql4KSb-r9fHTKxcOmSnR0yG5PzFarfI')
+updater.bot.set_webhook('https://answerbot111.herokuapp.com//6280626788:AAFLql4KSb-r9fHTKxcOmSnR0yG5PzFarfI')
 updater.idle()
+# Запускаємо бота
+#updater.start_polling()
+#updater.idle()
