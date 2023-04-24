@@ -1,0 +1,5 @@
+pip
+telebot
+telegram~=0.0.1
+requests~=2.28.2
+python-telegram-bot
