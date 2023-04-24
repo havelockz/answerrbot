@@ -34,7 +34,7 @@ def reply_handler(update, context):
 
 
 # Створюємо об'єкт для отримання оновлень від Telegram
-updater = Updater(bot_token)
+updater = Updater(bot_token, use_context=True)
 
 # Додаємо обробники повідомлень та команд
 updater.dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, message_handler))
