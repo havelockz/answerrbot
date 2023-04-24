@@ -1,7 +1,7 @@
 import os
 
 import telegram
-from telegram.ext import Updater, MessageHandler, CommandHandler, Filters
+from telegram.ext import *
 
 # Встановлюємо токен бота
 bot_token = '6280626788:AAFLql4KSb-r9fHTKxcOmSnR0yG5PzFarfI'
